@@ -161,9 +161,9 @@ class CorreiosClass {
             foreach ($retornosTmp as $retorno) {
 
                 if ($retorno->Valor > 0) {
-                    $this->retornoCorreios[$retorno->Codigo] = array(
+                    $this->retornoCorreios["0".$retorno->Codigo] = array(
                         'gravarCache'   => true,
-                        'idTranspAtual' => $servicos['servicos'][$retorno->Codigo],
+                        'idTranspAtual' => $servicos['servicos']["0".$retorno->Codigo],
                         'valorFrete'    => str_replace(",",".",$retorno->Valor),
                         'prazoEntrega'  => $retorno->PrazoEntrega,
                         'codRetorno'    => $retorno->Erro,
