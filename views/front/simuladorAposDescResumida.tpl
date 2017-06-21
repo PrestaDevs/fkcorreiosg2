@@ -3,7 +3,7 @@
 
     <p class="fkcorreiosg2-titulo" style="color: {$fkcorreiosg2['corFonteTitulo']};">{l s='Cálculo do Frete' mod='fkcorreiosg2'}</p>
 
-    <form action="{$link->getPageLink('product', true)|escape:'html'}&id_product={$fkcorreiosg2['idProduto']}" method="post">
+    <form action="" method="post">
         <div class="fkcorreiosg2-form">
             <input class="fkcorreiosg2-mask-cep fkcorreiosg2-col-lg-30" type="text" name="fkcorreiosg2_cep" placeholder="Informe o CEP" value="{$fkcorreiosg2['cepCookie']}"/>
             <input class="fkcorreiosg2-button" style="background-color: {$fkcorreiosg2['corBotao']}; color: {$fkcorreiosg2['corFonteBotao']};" type="submit" name="btnSubmit" value="{l s='Calcular frete' mod='fkcorreiosg2'}"/>
@@ -27,7 +27,7 @@
                                 {$transp['prazoEntrega']}
                             </td>
                             <td id="fkcorreiosg2-desc-resumida-valor">
-                                {convertPrice price=$transp['valorFrete']}
+                                {Tools::convertPrice($transp['valorFrete'])}
                             </td>
                         </tr>
                     {/foreach}

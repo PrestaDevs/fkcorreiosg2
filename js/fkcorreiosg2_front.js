@@ -24,21 +24,21 @@ $(document).ready(function(){
 });
 
 // Monitoramento automatico de acoes
-$(document).ready(function(){
+jQuery(document).ready(function(){
 
-    $(document).on('keyup', 'input[name=fkcorreiosg2_cep_adic_carrinho]', function(e) {
+    jQuery(document).on('keyup', 'input[name=fkcorreiosg2_cep_adic_carrinho]', function(e) {
 
-        var cep = $(this).val();
+        var cep = jQuery(this).val();
 
         if (typeof cep != 'undefined') {
             cep = cep.replace(/[^0-9]/g, '');
 
             if (cep.length == 8) {
 
-                var linkAtual = $('#fkcorreiosg2_link_cep_adic_carrinho').attr('href');
+                var linkAtual = jQuery('#fkcorreiosg2_link_cep_adic_carrinho').attr('href');
                 var novoLink = linkAtual + '&cep=' + cep;
 
-                $('#fkcorreiosg2_link_cep_adic_carrinho').attr('href', novoLink);
+                jQuery('#fkcorreiosg2_link_cep_adic_carrinho').attr('href', novoLink);
 
             }
         }

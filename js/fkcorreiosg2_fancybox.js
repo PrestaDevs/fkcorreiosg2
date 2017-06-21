@@ -1,13 +1,13 @@
 
-$(document).ready(function(){
+jQuery(document).ready(function(){
     
-    $('.fkcorreiosg2-fancybox').fancybox({
+    jQuery('.fkcorreiosg2-fancybox').fancybox({
         hideOnContentClick: false,
         openEffect        : 'elastic',
         closeEffect       : 'elastic'
     });
     
-    $(".fkcorreiosg2-fancybox").trigger("click");
+    jQuery(".fkcorreiosg2-fancybox").trigger("click");
     
 });
 
@@ -20,7 +20,7 @@ function mostraRastreio(codRastreio, urlFuncoes) {
     var urlFuncoesRastreio = '//' + document.domain + urlFuncoes;
 
     // Chama funcoes.php
-    $.ajax({
+    jQuery.ajax({
         type: "POST",
         async: false,
         url: urlFuncoesRastreio,
@@ -31,7 +31,7 @@ function mostraRastreio(codRastreio, urlFuncoes) {
 
         if (html != '') {
 
-            $.fancybox.open([{
+            jQuery.fancybox.open([{
                     type: 'inline',
                     modal: false,
                     minHeight: 30,

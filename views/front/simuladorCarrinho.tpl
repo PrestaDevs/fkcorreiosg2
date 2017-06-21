@@ -26,7 +26,7 @@
                             {$transp['prazoEntrega']}
                         </td>
                         <td id="fkcorreiosg2-carrinho-valor">
-                            {convertPrice price=$transp['valorFrete']}
+                            {Tools::convertPrice($transp['valorFrete'])}
                         </td>
                     </tr>
                 {/foreach}

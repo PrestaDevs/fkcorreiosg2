@@ -18,8 +18,8 @@ class fkcorreiosg2 extends CarrierModule {
 
         $this->name     = 'fkcorreiosg2';
         $this->tab      = 'shipping_logistics';
-        $this->version  = '1.2.3 pre-release';
-        $this->author   = 'módulosFK';
+        $this->version  = '1.2.3';
+        $this->author   = 'módulosFK (PrestaDevs)';
 
         $this->bootstrap = true;
         
@@ -381,6 +381,8 @@ class fkcorreiosg2 extends CarrierModule {
 
     public function hookdisplayFooterProduct($params) {
 
+
+
         if (!$this->processaSimulador('produto', '1', $params)) {
             return false;
         }
@@ -390,6 +392,7 @@ class fkcorreiosg2 extends CarrierModule {
     }
 
     public function hookdisplayShoppingCartFooter($params) {
+
 
         if (!$this->processaSimulador('carrinho', '', $params)) {
             return false;
@@ -2413,7 +2416,10 @@ class fkcorreiosg2 extends CarrierModule {
         }
 
         if ($origem == 'produto') {
-            $this->gravaDadosSmartyFrete($msgStatus, $params['product']->id, $transportadoras, $lightBox);
+            $product =(object) $params['product'];
+            
+
+            $this->gravaDadosSmartyFrete($msgStatus, $product->id, $transportadoras, $lightBox);
         }else {
             $this->gravaDadosSmartyFrete($msgStatus, null, $transportadoras, false);
         }
