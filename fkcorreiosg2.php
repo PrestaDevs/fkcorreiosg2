@@ -18,7 +18,7 @@ class fkcorreiosg2 extends CarrierModule {
 
         $this->name     = 'fkcorreiosg2';
         $this->tab      = 'shipping_logistics';
-        $this->version  = '1.2.3';
+        $this->version  = '1.2.4';
         $this->author   = 'módulosFK (PrestaDevs)';
 
         $this->bootstrap = true;
