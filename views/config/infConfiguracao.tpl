@@ -6,10 +6,10 @@
     </div>
 
     <div class="fkcorreiosg2-panel-header">
-        <button type="button" value="1" name="btnAjuda" class="fkcorreiosg2-button fkcorreiosg2-float-right" onClick="window.open('http://www.modulosfk.com.br/modulosfk/ajuda/fkcorreiosg2_v1_0_0.pdf','Janela','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=900,height=500,left=500,top=150'); return false;">
-            <i class="process-icon-help"></i>
-            {l s="Ajuda" mod="fkcorreiosg2"}
-        </button>
+        <a href="https://www.facebook.com/groups/prestashopbrasil/" target="_blank" class="fkcorreiosg2-button fkcorreiosg2-float-right">
+                <i class="process-icon-help"></i>
+                {l s="Ajuda" mod="fkcorreiosg2"}
+            </a>
     </div>
 
     <div class="fkcorreiosg2-panel fkcorreiosg2-col-lg-60 fkcorreiosg2-sub-panel" id="fkcorreiosg2_inf_configuracao">
