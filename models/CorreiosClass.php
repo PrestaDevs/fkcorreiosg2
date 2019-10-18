@@ -147,9 +147,17 @@ class CorreiosClass {
         );
 
         try {
-            $ws = new SoapClient(Configuration::get('FKCORREIOSG2_URL_WS_CORREIOS'));
+            /*$ws = new SoapClient(Configuration::get('FKCORREIOSG2_URL_WS_CORREIOS'));
             $arrayRetorno = $ws->CalcPrecoPrazo($parm);
-            $retornos = $arrayRetorno->CalcPrecoPrazoResult->Servicos->cServico;
+            $retornos = $arrayRetorno->CalcPrecoPrazoResult->Servicos->cServico;*/
+
+            $url = 'http://ws.correios.com.br/calculador/CalcPrecoPrazo.aspx';
+            $data = http_build_query($parm);
+            $curl = curl_init($url . '?' . $data);
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+            $result = curl_exec($curl);
+            $result = simplexml_load_string($result);
+            $retornos = $result;
 
             // Se somente 1 servico dos Correios ativo
             if (count($retornos) == 1) {
